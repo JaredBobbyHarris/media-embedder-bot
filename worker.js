@@ -175,4 +175,4 @@ function apiUrl (methodName, params = null) {
   }
   return `https://api.telegram.org/bot${TOKEN}/${methodName}${query}`
 }
-//redeploy
+//redeploy_1.0
