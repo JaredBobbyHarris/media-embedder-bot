@@ -58,8 +58,28 @@ async function onUpdate (update) {
  * https://core.telegram.org/bots/api#message
  */
 async function onMessage (message) {
-    const {url, title} = await getFixedURL(message.text)
-    return sendPlainText(message.chat.id, url)
+    const chatId = message.chat.id
+    const text = message.text
+
+    // Handle command FIRST
+    if (text === '/list_supported_media') {
+        await sendPlainText(
+            chatId,
+            "Supported media:\n- YouTube\n- Twitter/X\n- Instagram\n- TikTok\n- Reddit\n- Bluesky"
+        )
+
+        await sendPlainText(
+            chatId,
+            "Tip: Send a link and this bot will convert it automatically"
+        )
+
+        return
+    }
+
+    // Default behavior (existing logic)
+    const {url, title} = await getFixedURL(text)
+
+    await sendPlainText(chatId, url)
 }
 
 /**
