@@ -1,4 +1,4 @@
-name = "media-embedder-bot"
+name = "meb-bot-2026"
 main = "worker.js"
 compatibility_date = "2024-11-23"
 workers_dev = true
