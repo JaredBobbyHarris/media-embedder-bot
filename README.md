@@ -84,5 +84,3 @@ You don't need to install anything on your PC, and you can run this bot entirely
 
 [Telegram Bot on Cloudflare Workers](https://github.com/cvzi/telegram-bot-cloudflare)
 
-
-test
